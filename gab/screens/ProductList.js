@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import Products from "./Products";
+import Products from "./Product";
 
 export default class ProductsList extends React.Component {
   render() {
