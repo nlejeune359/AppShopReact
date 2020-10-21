@@ -2,32 +2,36 @@ import React from "react";
 import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import Button from '../components/Button';
 import { images } from '../constants/Images'
+import Header from "../components/Header";
 
 export default function Home(props) {
 
     return <View style={styles.container}>
         <ImageBackground source={images.background.uri} style={styles.image}>
 
-            <Text style={styles.header}>Le bateau de Thibault</Text>
-            <Text>Vente en direct de notre bateau</Text>
-            <Text>Produits selon la saison, Livraisons sur Paris</Text>
-            <Text>06.63.99.99.78</Text>
-            <Text>lebateaudethibault@gmail.com</Text>
-            <Text>www.facebook.com/lebateaudethibault</Text>
+            <Header navigation={props.navigation} />
 
-            <Text style={styles.test}>
-                <Button image={images.poisson.uri} screen="Products" text="Produits et Promotions" navigation={props.navigation}></Button>
+            <Text style={styles.title}>Le bateau de Thibault</Text>
+
+            <Text style={styles.text}>
+                Vente en direct de notre bateau
+                Produits selon la saison, Livraisons sur Paris
+                06.63.99.99.78
+                lebateaudethibault@gmail.com
+                www.facebook.com/lebateaudethibault
             </Text>
 
-            <Text style={styles.test}>
-                <Button image={images.ancre.uri} screen="Cart" text="Bateaux" navigation={props.navigation}></Button>
-                <Button image={images.ancre.uri} screen="Cart" text="Bateaux" navigation={props.navigation}></Button>
-            </Text>
+            <Button image={images.poisson.uri} screen="Products" text="Produits et Promotions" navigation={props.navigation}></Button>
 
-            <Text style={styles.test}>
+            <View style={styles.test}>
+                <Button image={images.ancre.uri} screen="ProductsList" text="Liste produits" navigation={props.navigation}></Button>
+                <Button image={images.ancre.uri} screen="Cart" text="Bateaux" navigation={props.navigation}></Button>
+            </View>
+
+            <View style={styles.test}>
                 <Button image={images.ancre.uri} screen="Cart" text="Bateaux" navigation={props.navigation}></Button>
                 <Button image={images.ancre.uri} screen="Cart" text="Bateaux" navigation={props.navigation}></Button>
-            </Text>
+            </View>
 
         </ImageBackground>
     </View>
@@ -54,15 +58,23 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
 
-    text: {
+    title: {
         color: "white",
         fontStyle: 'italic',
-        fontFamily: 'normal',
-        fontSize: 30,
+        textAlign: "center",
+        fontSize: 35,
+        fontWeight: "bold"
+    },
+
+    text: {
+        color: "#000",
+        fontStyle: "italic",
+        textAlign: "center",
+        fontSize: 25,
         fontWeight: "bold"
     },
 
     test: {
-        flexDirection: "column",
+        flexDirection: "row",
     },
 })
