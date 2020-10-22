@@ -6,7 +6,7 @@ import Header from "../components/Header";
 
 export default class RestaurantsList extends React.Component {
   state = {
-    data: require("../assets/data/restaurants.json"),
+    data: require("../assets/data/restaurants.json")
   };
 
   render() {
@@ -28,7 +28,6 @@ export default class RestaurantsList extends React.Component {
                       text={x.name}
                       key={index}
                       navigation={this.props.navigation}
-                      image={images.poulpe.uri}
                     />
                   );
                 })
@@ -40,7 +39,6 @@ export default class RestaurantsList extends React.Component {
                       text={x.name}
                       key={index}
                       navigation={this.props.navigation}
-                      image={images.poulpe.uri}
                     />
                   );
                 })}

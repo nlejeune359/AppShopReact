@@ -6,12 +6,6 @@ import { getRessources } from "../services/apirest";
 import Header from "../components/Header";
 
 export default class Products extends React.Component {
-  /*componentDidMount() {
-        getRessources("products").then(response => {
-            this.setState({ data: response })
-        });
-    }*/
-
   render() {
     return (
       <View style={styles.container}>
