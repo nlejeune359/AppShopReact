@@ -20,13 +20,13 @@ export default class Products extends React.Component {
 
                 <Header navigation={this.props.navigation} />
 
-                <Text style={{ marginVertical: 10, textAlign: "center" }}>Choisissez vos Produits</Text>
+                <Text style={{ marginVertical: 10, textAlign: "center"}}>Choisissez votre catégorie</Text>
 
                 <Button text="Poissons" screen="ProductsList" data={0} navigation={this.props.navigation} image = {images.poulpe.uri} />
 
-                <Button text="Coquillages" screen="ProductsList" data="1" navigation={this.props.navigation} image = {images.poulpe.uri} />
+                <Button text="Coquillages" screen="ProductsList" data={1} navigation={this.props.navigation} image = {images.poulpe.uri} />
 
-                <Button text="Crustacés" screen="ProductsList" data="2" navigation={this.props.navigation} image = {images.poulpe.uri} />
+                <Button text="Crustacés" screen="ProductsList" data={2} navigation={this.props.navigation} image = {images.poulpe.uri} />
 
                 <Button text="Promotions" screen="ProductsList" data="sale" navigation={this.props.navigation} image = {images.poulpe.uri} />
 

@@ -13,7 +13,7 @@ export default function Header(props) {
             )}
         </TouchableOpacity>
 
-        <Image source={images.navbarbg.uri} style={{ width: 50, height: 50, marginRight: 10 }}></Image>
+        <Image source={images.navbarbg.uri} style={{ width: "65%", height: 50, marginRight: 10 }}></Image>
 
         <TouchableOpacity 
             onPress={() => props.navigation.navigate('Cart')}>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         margin: 5,
         padding: 10,
         flexDirection: 'row',
-        opacity: 0.8,
+        backgroundColor: '#11ffee00'
     },
 
     text: {

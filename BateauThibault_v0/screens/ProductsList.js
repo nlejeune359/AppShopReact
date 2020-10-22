@@ -17,12 +17,18 @@ export default class ProductsList extends React.Component {
         return <View style={styles.container}>
             <ImageBackground source={images.background.uri} style={styles.image}>
 
-                <Header></Header>
+                <Header navigation={this.props.navigation} />
 
                 {
+                    products != "sale" ? (
                     this.state.data.filter(el => el.category == products).map((x, index) => {
-                        return <Button text={x.name} key={index} screen="Home" navigation={this.props.navigation} image={images.poulpe.uri}></Button>
+                        return <Button text={x.name} key={index} navigation={this.props.navigation} image={images.poulpe.uri} />
+                    }))
+                    
+                    : this.state.data.filter(el => el.sale).map((x, index) => {
+                        return <Button text={x.name} key={index} navigation={this.props.navigation} image={images.poulpe.uri} />
                     })
+
                 }
             </ImageBackground>
         </View>
