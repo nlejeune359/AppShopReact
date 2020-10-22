@@ -5,45 +5,60 @@ import Button from "../components/Button";
 import Header from "../components/Header";
 
 export default class ProductsList extends React.Component {
-    state = {
-        data: require("../assets/data/products.json")
-    }
+  state = {
+    data: require("../assets/data/products.json"),
+  };
 
-    render() {
-        let products = this.props.route.params.data
-            ? this.props.route.params.data
-            : [];
+  render() {
+    let products = this.props.route.params.data
+      ? this.props.route.params.data
+      : [];
 
-        return <View style={styles.container}>
-            <ImageBackground source={images.background.uri} style={styles.image}>
+    return (
+      <View style={styles.container}>
+        <ImageBackground source={images.background.uri} style={styles.image}>
+          <Header navigation={this.props.navigation} />
 
-                <Header navigation={this.props.navigation} />
-
-                {
-                    products != "sale" ? (
-                    this.state.data.filter(el => el.category == products).map((x, index) => {
-                        return <Button text={x.name} key={index} navigation={this.props.navigation} image={images.poulpe.uri} />
-                    }))
-                    
-                    : this.state.data.filter(el => el.sale).map((x, index) => {
-                        return <Button text={x.name} key={index} navigation={this.props.navigation} image={images.poulpe.uri} />
-                    })
-
-                }
-            </ImageBackground>
-        </View>
-    }
+          {products != "sale"
+            ? this.state.data
+                .filter((el) => el.category == products)
+                .map((x, index) => {
+                  return (
+                    <Button
+                      text={x.name}
+                      key={index}
+                      navigation={this.props.navigation}
+                      image={images.poulpe.uri}
+                    />
+                  );
+                })
+            : this.state.data
+                .filter((el) => el.sale)
+                .map((x, index) => {
+                  return (
+                    <Button
+                      text={x.name}
+                      key={index}
+                      navigation={this.props.navigation}
+                      image={images.poulpe.uri}
+                    />
+                  );
+                })}
+        </ImageBackground>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: "column"
-    },
+  container: {
+    flex: 1,
+    flexDirection: "column",
+  },
 
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center"
-    },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+  },
 });
