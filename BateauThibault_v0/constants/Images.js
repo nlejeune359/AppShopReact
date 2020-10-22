@@ -29,6 +29,11 @@ const images = {
         uri: require('../assets/iTunesArtwork.png')
     },
 
+    navbarbg: {
+        name: 'navebarbg',
+        uri: require('../assets/navbarbg.png')
+    },
+
     cartLogo: {
         name: 'cartLogo',
         uri: require('../assets/cartLogo.png')

@@ -13,7 +13,7 @@ export default function Header(props) {
             )}
         </TouchableOpacity>
 
-        <Image source={images.iTunesArtwork.uri} style={{ width: 50, height: 50, marginRight: 10 }}></Image>
+        <Image source={images.navbarbg.uri} style={{ width: 50, height: 50, marginRight: 10 }}></Image>
 
         <TouchableOpacity 
             onPress={() => props.navigation.navigate('Cart')}>

@@ -1,30 +1,31 @@
 import React from "react";
 import { ImageBackground, Text, View, StyleSheet } from "react-native";
-import Products from "./Products";
 import { images } from "../constants/Images";
 import Button from "../components/Button";
 import Header from "../components/Header";
 
 export default class ProductsList extends React.Component {
+    state = {
+        data: require("../assets/data/products.json")
+    }
+
     render() {
         let products = this.props.route.params.data
             ? this.props.route.params.data
             : [];
-        return (
-            <View style={styles.container}>
-                <Text style={{ marginVertical: 10, textAlign: "center" }}>
-                    Choose your products
-                </Text>
 
-                <Header navigation={this.props.navigation}/>
+        return <View style={styles.container}>
+            <ImageBackground source={images.background.uri} style={styles.image}>
 
-                <View style={{ flex: 1 }}>
-                    {products.map((value, index) => {
-                        return <Products key={index} item={value} />;
-                    })}
-                </View>
-            </View>
-        );
+                <Header></Header>
+
+                {
+                    this.state.data.filter(el => el.category == products).map((x, index) => {
+                        return <Button text={x.name} key={index} screen="Home" navigation={this.props.navigation} image={images.poulpe.uri}></Button>
+                    })
+                }
+            </ImageBackground>
+        </View>
     }
 }
 
@@ -32,5 +33,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "column"
+    },
+
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center"
     },
 });

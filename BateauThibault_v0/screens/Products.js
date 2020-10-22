@@ -6,39 +6,30 @@ import { getRessources } from "../services/apirest";
 import Header from "../components/Header";
 
 export default class Products extends React.Component {
-    state = {
-        data: []
-    }
 
-    componentDidMount() {
+    /*componentDidMount() {
         getRessources("products").then(response => {
             this.setState({ data: response })
         });
-    }
+    }*/
+
     render() {
         return <View style={styles.container}>
+
             <ImageBackground source={images.background.uri} style={styles.image}>
 
                 <Header navigation={this.props.navigation} />
 
                 <Text style={{ marginVertical: 10, textAlign: "center" }}>Choisissez vos Produits</Text>
-                <View style={{ flex: 1 }}>
-                    <Button style={styles.buttons} text="Poissons" screen="ProductsList" data="0" navigation={this.props.navigation}>
-                        image = {images.poulpe.uri}
-                    </Button>
 
-                    <Button style={styles.buttons} text="Coquillages" screen="ProductsList" data="1" navigation={this.props.navigation}>
-                        image = {images.poulpe.uri}
-                    </Button>
+                <Button text="Poissons" screen="ProductsList" data={0} navigation={this.props.navigation} image = {images.poulpe.uri} />
 
-                    <Button style={styles.buttons} text="Crustacés" screen="ProductsList" data="2" navigation={this.props.navigation} >
-                        image = {images.poulpe.uri}
-                    </Button>
+                <Button text="Coquillages" screen="ProductsList" data="1" navigation={this.props.navigation} image = {images.poulpe.uri} />
 
-                    <Button style={styles.buttons} text="Promotions" screen="ProductsList" data="sale" navigation={this.props.navigation}>
-                        image = {images.poulpe.uri}
-                    </Button>
-                </View>
+                <Button text="Crustacés" screen="ProductsList" data="2" navigation={this.props.navigation} image = {images.poulpe.uri} />
+
+                <Button text="Promotions" screen="ProductsList" data="sale" navigation={this.props.navigation} image = {images.poulpe.uri} />
+
             </ImageBackground>
         </View>
     }
@@ -48,18 +39,7 @@ export default class Products extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#bbb',
-        alignItems: 'center',
-        margin: 5,
-        padding: 10,
-        flexDirection: 'row',
-        opacity: 0.8
-    },
-
-    buttons: {
-        width: "100%",
-        flexDirection: "row",
-        height: "20%",
+        flexDirection: "column"
     },
 
     image: {
