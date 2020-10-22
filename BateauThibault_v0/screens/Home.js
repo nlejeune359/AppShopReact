@@ -4,6 +4,13 @@ import Button from "../components/Button";
 import { images } from "../constants/Images";
 import Header from "../components/Header";
 
+/*const fetchFonts = () => {
+    return Font.loadAsync({
+        'dancingscript-bold': require('../assets/DanscingScript-Bold.ttf'),
+        'dancingscript-regular': require('../assets/DanscingScript-Regular.ttf')
+    })
+}*/
+
 export default function Home(props) {
   return (
     <View style={styles.container}>
