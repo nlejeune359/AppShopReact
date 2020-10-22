@@ -12,7 +12,7 @@ export default class RecetteList extends React.Component {
             <ImageBackground source={images.background.uri} style={styles.image}>
 
                 <Header navigation={this.props.navigation} />
- 
+
                 <Text style={styles.title}>Nos Recettes</Text>
 
                 <Text style={styles.text}>
