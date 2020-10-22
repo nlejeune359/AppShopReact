@@ -8,6 +8,7 @@ import Button from "./components/Button";
 import ShipsList from "./screens/ShipsList";
 import ShipDetails from "./screens/ShipDetails";
 import RecetteList from './screens/RecetteList';
+import RecetteDetails from './screens/RecetteDetails';
 import { createStackNavigator } from "@react-navigation/stack";
 import { Provider } from "react-redux";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -32,6 +33,7 @@ export default function App() {
             <Stack.Screen name="ShipsList" component={ShipsList} />
             <Stack.Screen name="ShipDetails" component={ShipDetails} />
             <Stack.Screen name="RecetteList" component={RecetteList} />
+            <Stack.Screen name="RecetteDetails" component={RecetteDetails} />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
