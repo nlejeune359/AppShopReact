@@ -7,6 +7,7 @@ import Cart from "./screens/Cart";
 import Button from "./components/Button";
 import ShipsList from "./screens/ShipsList";
 import ShipDetails from "./screens/ShipDetails";
+import RecetteList from './screens/RecetteList';
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
@@ -25,6 +26,7 @@ export default function App() {
         <Stack.Screen name="Cart" component={Cart} />
         <Stack.Screen name="ShipsList" component={ShipsList} />
         <Stack.Screen name="ShipDetails" component={ShipDetails} />
+        <Stack.Screen name="RecetteList" component={RecetteList} />
       </Stack.Navigator>
     </NavigationContainer>
   );

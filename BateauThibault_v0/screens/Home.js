@@ -42,9 +42,9 @@ export default function Home(props) {
 
         <View style={styles.test}>
           <Button
-            image={images.ancre.uri}
-            screen="Cart"
-            text="Bateaux"
+            image={images.recette.uri}
+            screen="RecetteList"
+            text="Recettes"
             navigation={props.navigation}
           ></Button>
           <Button
