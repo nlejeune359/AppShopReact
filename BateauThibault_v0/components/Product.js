@@ -1,7 +1,8 @@
 import React from 'react'
-import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet, Text } from 'react-native';
 import { images } from '../constants/Images';
 import { addProduct, removeProduct } from '../store/actions/cartActions';
+import { connect } from 'react-redux';
 
 class Product extends React.Component {
 
@@ -35,6 +36,21 @@ class Product extends React.Component {
     }
 
 }
+
+const mapStateToProps = state => {
+    return {
+        products: state.cart.products
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        addProduct: data => {dispatch(addProduct(data));},
+        removeProduct: data => {dispatch(removeProduct(data));},
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
 
 const styles = StyleSheet.create({
     container: {

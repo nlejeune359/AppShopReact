@@ -25,7 +25,7 @@ export default class ProductsList extends React.Component {
                             .map((x, index) => {
                                 return (
                                     <Product
-                                        item={x}
+                                        item={x} key={index}
                                     />
                                 );
                             })
@@ -34,7 +34,7 @@ export default class ProductsList extends React.Component {
                             .map((x, index) => {
                                 return (
                                     <Product
-                                        item={x}
+                                        item={x} key={index}
                                     />
                                 );
                             })}

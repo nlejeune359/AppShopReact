@@ -4,7 +4,6 @@ import Home from "./screens/Home";
 import Products from "./screens/Products";
 import ProductsList from "./screens/ProductsList";
 import Cart from "./screens/Cart";
-import Button from "./components/Button";
 import ShipsList from "./screens/ShipsList";
 import ShipDetails from "./screens/ShipDetails";
 import RecetteList from './screens/RecetteList';
