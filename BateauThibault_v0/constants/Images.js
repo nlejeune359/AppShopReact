@@ -38,6 +38,26 @@ const images = {
         name: 'cartLogo',
         uri: require('../assets/cartLogo.png')
     },
+    
+    deLaBrise: {
+        name: 'deLaBrise',
+        uri: require('../assets/deLaBrise_icon.png')
+    },
+
+    saphir: {
+        name: 'saphir',
+        uri: require('../assets/saphir_icon.png')
+    },
+
+    gastMicher: {
+        name: 'gastMicher',
+        uri: require('../assets/gastMicher_icon.png')
+    },
+
+    aquilon: {
+        name: 'aquilon',
+        uri: require('../assets/aquilon_icon.png')
+    },
 };
 
 export {images};

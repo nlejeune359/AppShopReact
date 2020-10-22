@@ -25,7 +25,7 @@ export default function Home(props) {
 
             <View style={styles.test}>
                 <Button image={images.ancre.uri} screen="ProductsList" text="Liste produits" navigation={props.navigation}></Button>
-                <Button image={images.ancre.uri} screen="Cart" text="Bateaux" navigation={props.navigation}></Button>
+                <Button image={images.ancre.uri} screen="ShipsList" text="Bateaux" navigation={props.navigation}></Button>
             </View>
 
             <View style={styles.test}>
