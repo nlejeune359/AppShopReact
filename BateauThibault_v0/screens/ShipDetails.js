@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, ImageBackground, Image } from "react-native";
-import Button from "../components/Button";
 import { images } from "../constants/Images";
 import Header from "../components/Header";
 import { boat } from "../constants/Boat";
@@ -14,7 +13,7 @@ export default class ShipDetails extends React.Component {
     return (
       <View style={styles.container}>
         <ImageBackground source={images.background.uri} style={styles.image}>
-          <Header navigation={props.navigation} />
+          <Header navigation={this.props.navigation} />
 
           <Text style={styles.title}>{boat[shipName].name}</Text>
           <Image style={styles.imageBoat} source={boat[shipName].image}></Image>
