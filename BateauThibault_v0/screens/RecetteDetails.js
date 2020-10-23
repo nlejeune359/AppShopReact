@@ -14,11 +14,17 @@ export default class RecetteDetails extends React.Component {
     return (
       <View style={styles.container}>
         <ImageBackground source={images.background.uri} style={styles.image}>
+          <Header navigation={this.props.navigation} />
 
           <Text style={styles.title}>{recette[RecetteName].name}</Text>
-          <Image style={styles.imageRecette} source={recette[RecetteName].image}></Image>
+          <Image
+            style={styles.imageRecette}
+            source={recette[RecetteName].image}
+          ></Image>
 
-          <Text style={styles.description}>{recette[RecetteName].description}</Text>
+          <Text style={styles.description}>
+            {recette[RecetteName].description}
+          </Text>
         </ImageBackground>
       </View>
     );
@@ -37,7 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  imageRecette:{
+  imageRecette: {
     alignContent: "center",
     resizeMode: "cover",
     marginLeft: "auto",
@@ -76,7 +82,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginRight: "auto",
     marginLeft: "auto",
-   // marginBottom: "20%",
+    // marginBottom: "20%",
     marginTop: "10%",
   },
 

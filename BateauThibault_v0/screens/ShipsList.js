@@ -14,8 +14,7 @@ export default class ShipsList extends React.Component {
           <Text style={styles.title}>Nos bateaux partenaires</Text>
 
           <Text style={styles.text}>
-            Tous les eaux mènent à Thibault  
-            06.63.99.99.78
+            Tous les eaux mènent à Thibault 06.63.99.99.78
             lebateaudethibault@gmail.com www.facebook.com/lebateaudethibault
           </Text>
 
