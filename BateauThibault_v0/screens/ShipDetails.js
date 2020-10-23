@@ -14,13 +14,12 @@ export default class ShipDetails extends React.Component {
     return (
       <View style={styles.container}>
         <ImageBackground source={images.background.uri} style={styles.image}>
-          <Header navigation={this.props.navigation} />
 
           <Text style={styles.title}>{boat[shipName].name}</Text>
-          <Image source={boat[shipName].image}></Image>
+          <Image style={styles.imageBoat} source={boat[shipName].image}></Image>
           <Text style={styles.text}>{boat[shipName].imat}</Text>
 
-          <Text>{boat[shipName].description}</Text>
+          <Text style={styles.description}>{boat[shipName].description}</Text>
         </ImageBackground>
       </View>
     );
@@ -39,6 +38,22 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
+  description: {
+    fontSize: 10,
+    textAlign: "center",
+    marginRight: "auto",
+    marginLeft: "auto",
+//    marginBottom: "20%",
+    marginTop: "10%",
+  },
+
+  imageBoat:{
+    alignContent: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: "6%",
+  },
+
   header: {
     position: "relative",
     top: "0%",
@@ -54,6 +69,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 35,
     fontWeight: "bold",
+    marginBottom: "10%"
   },
 
   text: {

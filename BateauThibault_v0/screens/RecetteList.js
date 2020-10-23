@@ -37,7 +37,7 @@ export default class RecetteList extends React.Component {
                     <Button image={images.poulpe.uri} text="Recette"></Button>
                     <Button image={images.poulpe.uri} text="Recette"></Button>
                 </View>
-
+                
             </ImageBackground>
         </View>);
     }
@@ -76,8 +76,10 @@ const styles = StyleSheet.create({
         color: "#000",
         fontStyle: "italic",
         textAlign: "center",
-        fontSize: 25,
-        fontWeight: "bold"
+        fontSize: 15,
+        fontWeight: "bold",
+        marginBottom: "10%",
+        marginTop:"10%"
     },
 
     test: {

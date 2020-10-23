@@ -33,7 +33,7 @@ export default function App() {
             <Stack.Screen name="ShipDetails" component={ShipDetails} />
             <Stack.Screen name="RecetteList" component={RecetteList} />
             <Stack.Screen name="RecetteDetails" component={RecetteDetails} />
-          </Stack.Navigator>
+          </Stack.Navigator> 
         </NavigationContainer>
       </SafeAreaProvider>
     </Provider>
