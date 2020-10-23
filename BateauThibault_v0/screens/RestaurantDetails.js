@@ -1,29 +1,20 @@
 import React from "react";
-import { View, Text, StyleSheet, ImageBackground } from "react-native";
-import Button from "../components/Button";
+import { View, Text, StyleSheet, ImageBackground, Image } from "react-native";
 import { images } from "../constants/Images";
 import Header from "../components/Header";
 
-export default class RestaurantsList extends React.Component {
-  state = {
-    data: require("../assets/data/restaurants.json"),
-  };
+export default class ShipDetails extends React.Component {
   render() {
+    let restaurant = this.props.route.params.data
+      ? this.props.route.params.data
+      : "";
+
     return (
       <View style={styles.container}>
         <ImageBackground source={images.background.uri} style={styles.image}>
           <Header navigation={this.props.navigation} />
-          {this.state.data.map((x, index) => {
-            return (
-              <Button
-                text={x.name}
-                data={x}
-                screen="RestaurantDetails"
-                navigation={this.props.navigation}
-                key={index}
-              ></Button>
-            );
-          })}
+          <Text style={styles.title}>{restaurant.name}</Text>
+          <Text style={styles.text}>{restaurant.description}</Text>
         </ImageBackground>
       </View>
     );

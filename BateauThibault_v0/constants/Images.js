@@ -77,6 +77,10 @@ const images = {
  bar: {
      name: 'bar',
      uri: require('../assets/barRecette_icon.png')
+ },
+ restaurant: {
+   name: 'restaurant',
+   uri: require('../assets/restaurant.png')
  }
 };
 

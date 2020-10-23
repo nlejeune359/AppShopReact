@@ -55,9 +55,9 @@ export default function Home(props) {
             navigation={props.navigation}
           ></Button>
           <Button
-            image={images.ancre.uri}
-            screen="Cart"
-            text="Bateaux"
+            image={images.restaurant.uri}
+            screen="Restaurants"
+            text="Restaurants"
             navigation={props.navigation}
           ></Button>
         </View>

@@ -1,20 +1,32 @@
 [
     {
-        "name": "Bistrot des Gascons"
+        "id": 0,
+        "name": "Bistrot des Gascons",
+        "uri": "../assets/desGascons.png",
+        "description": "description restaurant"
     },
     {
-        "name": "Bistrot Landais"
+        "id": 1,
+        "name": "Bistrot Landais",
+        "uri": "../assets/bistrotLandais.png",
+        "description": "description restaurant"
     },
     {
-        "name": "Les fous de l'Ile"
+        "id": 2,
+        "name": "Les fous de l'Ile",
+        "uri": "../assets/fousDeLile.png",
+        "description": "description restaurant"
     },
     {
-        "name": "Bistrot du Sommelier"
+        "id": 3,
+        "name": "Bistrot du Sommelier",
+        "uri": "../assets/duSommelier.png",
+        "description": "description restaurant"
     },
     {
-        "name": "Villa 9-trois"
-    },
-    {
-        "name": "Devenez partenaire!"
+        "id": 4,
+        "name": "Villa 9-trois",
+        "uri": "../assets/villa9Trois.png",
+        "description": "description restaurant"
     }
 ]
