@@ -17,27 +17,30 @@ export default class ProductsList extends React.Component {
         return (
             <View style={styles.container}>
                 <ImageBackground source={images.background.uri} style={styles.image}>
+                    
                     <Header navigation={this.props.navigation} />
 
-                    {products != "sale"
-                        ? this.state.data
-                            .filter((el) => el.category == products)
-                            .map((x, index) => {
-                                return (
-                                    <Product
-                                        item={x} key={index}
-                                    />
-                                );
-                            })
-                        : this.state.data
-                            .filter((el) => el.sale)
-                            .map((x, index) => {
-                                return (
-                                    <Product
-                                        item={x} key={index}
-                                    />
-                                );
-                            })}
+                    {
+                        products != "sale"
+                            ? this.state.data
+                                .filter((el) => el.category == products)
+                                .map((x, index) => {
+                                    return (
+                                        <Product
+                                            item={x} key={index}
+                                        />
+                                    );
+                                })
+                            : this.state.data
+                                .filter((el) => el.sale)
+                                .map((x, index) => {
+                                    return (
+                                        <Product
+                                            item={x} key={index}
+                                        />
+                                    );
+                                })
+                    }
                 </ImageBackground>
             </View>
         );
