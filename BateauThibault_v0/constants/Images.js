@@ -18,6 +18,10 @@ const images = {
     name: "home",
     uri: require("../assets/homeLogo.png"),
   },
+  crab: {
+    name: "crab",
+    uri: require("../assets/tourteau.png"),
+  },
 
   poulpe: {
     name: "poulpe",
@@ -58,30 +62,30 @@ const images = {
     name: "aquilon",
     uri: require("../assets/aquilon_icon.png"),
   },
- 
+
   recette: {
-    name: 'recette',
-    uri: require('../assets/recette.png')
-},
+    name: "recette",
+    uri: require("../assets/recette.png"),
+  },
 
- homard: {
-     name: 'homard',
-     uri: require('../assets/homardRecette_icon.png')
- },
+  homard: {
+    name: "homard",
+    uri: require("../assets/homardRecette_icon.png"),
+  },
 
- stJacques: {
-     name: 'stJacques',
-     uri: require('../assets/saintJacques_icon.png')
- },
+  stJacques: {
+    name: "stJacques",
+    uri: require("../assets/saintJacques_icon.png"),
+  },
 
- bar: {
-     name: 'bar',
-     uri: require('../assets/barRecette_icon.png')
- },
- restaurant: {
-   name: 'restaurant',
-   uri: require('../assets/restaurant.png')
- }
+  bar: {
+    name: "bar",
+    uri: require("../assets/barRecette_icon.png"),
+  },
+  restaurant: {
+    name: "restaurant",
+    uri: require("../assets/restaurant.png"),
+  },
 };
 
 export { images };

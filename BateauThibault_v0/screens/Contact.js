@@ -1,26 +1,20 @@
 import React from "react";
 import { View, Text, StyleSheet, ImageBackground, Image } from "react-native";
-import Button from "../components/Button";
 import { images } from "../constants/Images";
 import Header from "../components/Header";
-import { boat } from "../constants/Boat";
 
-export default class ShipDetails extends React.Component {
+export default class Contact extends React.Component {
   render() {
-    let shipName = this.props.route.params.data
-      ? this.props.route.params.data
-      : "";
-
     return (
       <View style={styles.container}>
         <ImageBackground source={images.background.uri} style={styles.image}>
-          <Header navigation={props.navigation} />
-
-          <Text style={styles.title}>{boat[shipName].name}</Text>
-          <Image style={styles.imageBoat} source={boat[shipName].image}></Image>
-          <Text style={styles.text}>{boat[shipName].imat}</Text>
-
-          <Text style={styles.description}>{boat[shipName].description}</Text>
+          <Header navigation={this.props.navigation} />
+          <Text style={styles.title}>Le bateau de Thibault</Text>
+          <Text style={styles.text}>
+            Vente en direct de notre bateau Produits selon la saison, Livraisons
+            sur Paris 06.63.99.99.78 lebateaudethibault@gmail.com
+            www.facebook.com/lebateaudethibault
+          </Text>
         </ImageBackground>
       </View>
     );

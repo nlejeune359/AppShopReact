@@ -8,6 +8,7 @@ import ShipsList from "./screens/ShipsList";
 import ShipDetails from "./screens/ShipDetails";
 import RecetteList from './screens/RecetteList';
 import RecetteDetails from './screens/RecetteDetails';
+import Contact from './screens/Contact';
 import RestaurantDetails from './screens/RestaurantDetails';
 import Restaurants from './screens/Restaurants';
 import { createStackNavigator } from "@react-navigation/stack";
@@ -37,6 +38,7 @@ export default function App() {
             <Stack.Screen name="RecetteDetails" component={RecetteDetails} />
             <Stack.Screen name="RestaurantDetails" component={RestaurantDetails} />
             <Stack.Screen name="Restaurants" component={Restaurants} />
+            <Stack.Screen name="Contact" component={Contact} />
           </Stack.Navigator> 
         </NavigationContainer>
       </SafeAreaProvider>

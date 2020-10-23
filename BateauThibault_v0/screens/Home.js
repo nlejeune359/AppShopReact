@@ -34,9 +34,9 @@ export default function Home(props) {
 
         <View style={styles.test}>
           <Button
-            image={images.ancre.uri}
-            screen="ProductsList"
-            text="Liste produits"
+            image={images.crab.uri}
+            screen="Contact"
+            text="Contact"
             navigation={props.navigation}
           ></Button>
           <Button
