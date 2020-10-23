@@ -1,9 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import Header from "../components/Header";
-import { store } from "react-redux";
+import { connect } from "react-redux";
+import Product from "../components/Product";
 
-export default class Cart extends React.Component {
+class Cart extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -23,6 +24,8 @@ const mapStateToProps = state => {
         products: state.cart.products
     }
 };
+
+export default connect(mapStateToProps, undefined)(Cart);
 
 const styles = StyleSheet.create({
   container: {
